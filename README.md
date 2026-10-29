@@ -4,6 +4,77 @@ Daily Reset — iOS-приложение для отслеживания пот�
 
 ## Содержание
 
+- [Структура проекта](#структура-проекта)
+
+# Daily Reset — структура проекта
+
+```text
+DailyReset/
+├── App/                                  # Запуск и основная структура приложения
+│   ├── MyApp.swift                       # Точка входа в приложение
+│   ├── ContentView.swift                 # Главный контейнер приложения
+│   └── OnboardingView.swift              # Первоначальное знакомство и настройка
+│
+├── Features/                             # Функциональные разделы приложения
+│   ├── Water/                            # Учёт выпитой воды
+│   │   ├── WaterView.swift               # Главный экран воды
+│   │   ├── WaterViewModel.swift          # Логика и состояние экрана воды
+│   │   ├── WaterProgressCard.swift       # Карточка дневной цели и прогресса
+│   │   ├── WaterHistoryView.swift        # История записей о воде
+│   │   └── WaterEntryDetailView.swift    # Подробности записи о воде
+│   │
+│   ├── Habits/                           # Управление привычками
+│   │   ├── HabitsView.swift              # Главный экран привычек
+│   │   ├── HabitsViewModel.swift         # Логика и состояние привычек
+│   │   ├── HabitRow.swift                # Строка одной привычки в списке
+│   │   ├── AddHabitView.swift            # Создание новой привычки
+│   │   ├── EditHabitView.swift           # Редактирование привычки
+│   │   └── HabitHistoryView.swift        # История выполнения привычки
+│   │
+│   └── Settings/                         # Настройки приложения
+│       ├── SettingsView.swift            # Главный экран настроек
+│       ├── SettingsViewModel.swift       # Логика и состояние настроек
+│       ├── ProfileView.swift             # Профиль пользователя
+│       ├── NotificationsSettingsView.swift # Настройки уведомлений
+│       ├── WaterGoalSettingsView.swift   # Настройка дневной цели по воде
+│       └── AboutView.swift               # Информация о приложении
+│
+├── Models/                               # Модели данных приложения
+│   ├── WaterEntry.swift                  # Запись о выпитой воде
+│   ├── Habit.swift                       # Модель привычки
+│   ├── HabitCompletion.swift              # Запись о выполнении привычки
+│   └── AppSettings.swift                 # Пользовательские настройки
+│
+├── Services/                             # Работа с данными и системными функциями
+│   ├── StorageService.swift              # Вспомогательная работа с хранилищем
+│   └── NotificationService.swift         # Планирование локальных уведомлений
+│
+├── Shared/                               # Общие компоненты интерфейса
+│   ├── MainTabBar.swift                  # Нижняя навигация между разделами
+│   ├── PrimaryButton.swift               # Переиспользуемая основная кнопка
+│   ├── EmptyStateView.swift              # Представление пустого состояния
+│   └── LoadingView.swift                 # Индикатор загрузки
+│
+├── DesignSystem/                         # Единый визуальный стиль приложения
+│   ├── AppColors.swift                   # Цветовая палитра
+│   ├── AppSpacing.swift                  # Общие отступы и расстояния
+│   └── AppTypography.swift               # Стили текста и типографика
+│
+└── Assets.xcassets/                      # Иконки, изображения и графические ресурсы
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Основные возможности](#основные-возможности)
 - [Технологии](#технологии)
 - [Архитектура](#архитектура)
